@@ -1,5 +1,5 @@
 # Relatório Técnico
-##  1. Como Rodar o Sistema (Quickstart)
+##  1. Como Rodar o Sistema
 
 ### Pré-requisitos
 
