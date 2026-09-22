@@ -1,0 +1,67 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Gateway {
+  serial       String   @id
+  modelo       String
+  firmware     String
+  intervaloSec Int      @default(10)
+  online       Boolean  @default(true)
+  updatedAt    DateTime @updatedAt
+
+  configs  GatewayConfig[]
+  leituras Leitura[]
+  alertas  Alerta[]
+}
+
+model GatewayConfig {
+  id         String   @id @default(uuid())
+  gatewayId  String
+  gateway    Gateway  @relation(fields: [gatewayId], references: [serial])
+  canal      Int
+  tag        String
+  descricao  String?
+  grandeza   String?
+  unidade    String?
+  tipo       String   @default("instantaneo") // "instantaneo" ou "acumulado"
+  alarmeAlto Float?
+  esc        Float    @default(1.0)
+  sig        Int      @default(0)
+  createdAt  DateTime @default(now())
+
+  @@unique([gatewayId, canal])
+}
+
+model Leitura {
+  id        String   @id @default(uuid())
+  gatewayId String
+  gateway   Gateway  @relation(fields: [gatewayId], references: [serial])
+  canal     Int
+  seq       Int
+  timestamp DateTime
+  valor     Float?
+  erro      String?
+  createdAt DateTime @default(now())
+
+  @@unique([gatewayId, canal, seq, timestamp])
+  @@index([gatewayId, timestamp])
+}
+
+model Alerta {
+  id        String    @id @default(uuid())
+  gatewayId String
+  gateway   Gateway   @relation(fields: [gatewayId], references: [serial])
+  canal     Int
+  tipo      String
+  mensagem  String
+  inicio    DateTime
+  fim       DateTime?
+  ativo     Boolean   @default(true)
+  createdAt DateTime  @default(now())
+}

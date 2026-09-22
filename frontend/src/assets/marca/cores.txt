@@ -1,0 +1,12 @@
+Cores da Sinalta (o logo usa as três primeiras)
+
+grafite      #14171C   texto e logo sobre fundo claro
+papel        #F5F2EC   fundo claro e logo sobre fundo escuro
+sinal        #FF5B2E   o ponto do logo e os destaques; pouco e com intenção
+verde        #1F6F5C   apoio
+cinza        #8C9096   texto secundário
+
+Arquivos
+sinalta.svg            logo horizontal, para fundo claro
+sinalta-negativo.svg   logo horizontal, para fundo escuro
+sinalta-simbolo.svg    só o símbolo, para ícone e favicon

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256" role="img" aria-label="Sinalta">
+  <rect width="64" height="64" rx="14" fill="#14171C" />
+  <g fill="none" stroke="#F5F2EC" stroke-width="5.5" stroke-linecap="round">
+    <path d="M39.8 24.2 A11 11 0 0 1 39.8 39.8" />
+    <path d="M46.1 17.9 A20 20 0 0 1 46.1 46.1" />
+    <path d="M24.2 24.2 A11 11 0 0 0 24.2 39.8" />
+    <path d="M17.9 17.9 A20 20 0 0 0 17.9 46.1" />
+  </g>
+  <circle cx="32" cy="32" r="5.5" fill="#FF5B2E" />
+</svg>

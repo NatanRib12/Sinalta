@@ -1,0 +1,16 @@
+{
+  "name": "sinalta-backend-planta",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "planta": "node planta/planta.mjs",
+    "planta:dia": "node planta/planta.mjs dia"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}
