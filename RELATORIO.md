@@ -52,7 +52,7 @@ O dashboard estará acessível em `http://localhost:5173` e a API em `http://loc
 │  │   Prisma / Postgres   │◄───│    WebSocket Broadcast (wsHandler)  │  │
 │  └───────────────────────┘    └──────────────────┬──────────────────┘  │
 └──────────────────────────────────────────────────┼─────────────────────┘
-                                                   │ WS (ws://.../ws)
+                                                   │ 
                                                    ▼
 ┌────────────────────────────────────────────────────────────────────────┐
 │                         Frontend (React + Vite)                        │
@@ -94,6 +94,8 @@ Resend API: Envio de emails para enviar alertar para o usuário.
    - Uma mensagem por canal para cada ciclo
    - Possui 4 canais de transmissão
    - Dados transmitidos precisam ser convertidos 
+
+
 
    * KG-200 (Multicanal / Batch):
    - Uma mensagem por ciclo para todos os canais
