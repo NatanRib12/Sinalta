@@ -4,21 +4,13 @@
 ### Pré-requisitos
 
 cd backend
-
-# Dependências Principais
 npm install fastify @fastify/cors @fastify/websocket @prisma/client dotenv mqtt resend
-
-# Dependências de Desenvolvimento
 npm install -D typescript tsx prisma @types/node
 
 ---
 
 cd frontend
-
-# Dependências Principais
 npm install react react-dom react-router-dom axios lucide-react
-
-# Dependências de Desenvolvimento
 npm install -D typescript @types/react @types/react-dom vite @vitejs/plugin-react tailwindcss postcss autoprefixer
 
 ### Passo a Passo
